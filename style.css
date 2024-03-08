@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+}
+body{
+    background: url(drummer-girl-thumb.jpg) no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttons{
+    margin: 20%;
+    display: flex;
+    gap: 23px;
+}
+.button{   
+    box-shadow: 2px 2px 6px;
+    background: #00000047;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px;
+    width: 78px;
+    height: 72px;
+    border-radius: 8px;
+    border: 1px solid black;
+    transition: transform 0.2s;
+}
+.letter{
+    color: white;
+    font-weight: 600;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+}
+.text{
+    font-size: 13px;
+    font-weight: 600;
+    color: rgb(195, 255, 0);
+
+}
+.button:hover{
+    transform: scale(1.1);
+
+}
+.playing{
+    transform: scale(0.9);
+    animation: push 0.5s ease-in-out;
+    /* animation: push 0.25s linear; */
+}
+@keyframes push{
+    0%{
+        
+        transform:perspective(100px) rotateX(0deg);
+    }
+    50%{
+        transform:perspective(200px) rotateX(-25deg);
+    }
+    100%{
+        transform:perspective(100px) rotateX(0deg);
+    }
+}
